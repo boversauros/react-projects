@@ -1,0 +1,20 @@
+{
+  "name": "react-projects",
+  "version": "1.0.0",
+  "description": "Multiproject repository built with npm workspaces and designed for practicing React",
+  "keywords": [
+    "workspaces",
+    "react"
+  ],
+  "workspaces": [
+    "projects/*"
+  ],
+  "author": "Oriol Bover Vila",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}
