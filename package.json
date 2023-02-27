@@ -9,6 +9,10 @@
   "workspaces": [
     "projects/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boversauros/react-projects.git"
+  },
   "author": "Oriol Bover Vila",
   "license": "ISC",
   "devDependencies": {
