@@ -8,8 +8,8 @@ This Tic Tac Toe game includes the following features:
 
 - Interactive game board with clickable cells ✅
 - Real-time display of the winner ✅
-- Automatic detection of win/tie conditions and game over state ❌
-- Option to start a new game at any time ❌
+- Automatic detection of win/tie conditions and game over state ✅
+- Option to start a new game ✅
 
 ## Technologies Used
 
