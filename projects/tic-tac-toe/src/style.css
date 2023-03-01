@@ -4,7 +4,7 @@
   font-weight: 400;
   
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #121213;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,25 +13,52 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+
+main {
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2rem;
   line-height: 1.1;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
-  font-size: 2.4em;
+  font-size: 1.5rem;  
   line-height: 1.1;
   text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  border-bottom: 2px solid #3a3a3c;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+button {
+  background-color: #3a3a3c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #4a4a4c;
 }
 
 .board {
@@ -43,8 +70,7 @@ h2 {
 .square {
   width: 100px;
   height: 100px;
-  border: 5px solid #fff;
-  border-radius: 10px;
+  border: 2px solid #3a3a3c;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,4 +78,13 @@ h2 {
   font-weight: 700;
   font-size: 3em;
   transition: all 0.3s ease-in-out;
+}
+
+.results {
+  display: flex;
+  gap:1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
