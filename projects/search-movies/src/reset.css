@@ -15,8 +15,8 @@
     --border: #526980;
     --code: #ffbe85;
     --animation-duration: 0.1s;
-    --button-base: #0c151c;
-    --button-hover: #040a0f;
+    --button-base: #252529;
+    --button-hover: #fff;
     --scrollbar-thumb: var(--button-hover);
     --scrollbar-thumb-hover: rgb(0, 0, 0);
     --form-placeholder: #a9a9a9;
@@ -48,16 +48,16 @@
   
   button {
     transition:
-      background-color 0.1s linear,
-      border-color 0.1s linear,
-      color 0.1s linear,
-      box-shadow 0.1s linear,
-      transform 0.1s ease;
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      color 0.25s ease,
+      box-shadow 0.25s ease,
+      transform 0.25s ease;
     transition:
-      background-color var(--animation-duration) linear,
-      border-color var(--animation-duration) linear,
-      color var(--animation-duration) linear,
-      box-shadow var(--animation-duration) linear,
+      background-color var(--animation-duration) ease,
+      border-color var(--animation-duration) ease,
+      color var(--animation-duration) ease,
+      box-shadow var(--animation-duration) ease,
       transform var(--animation-duration) ease;
   }
   
@@ -326,6 +326,7 @@
   
   button:hover {
     background: #040a0f;
+    color:#000;
     background: var(--button-hover);
   }
   
@@ -586,10 +587,6 @@
     text-decoration: none;
     color: #41adff;
     color: var(--links);
-  }
-  
-  a:hover {
-    text-decoration: underline;
   }
   
   code {
@@ -877,10 +874,5 @@
   
     tbody tr:nth-child(even) {
       background-color: #f2f2f2;
-    }
-  
-    a {
-      color: #00f;
-      text-decoration: underline;
     }
   }

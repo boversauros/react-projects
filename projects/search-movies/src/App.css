@@ -29,6 +29,10 @@
     border-radius: 5px;
 }
 
+.movie:hover {
+    border-color: var(--primary);
+}
+
 .movie h2 {
     margin: 0;
 }
