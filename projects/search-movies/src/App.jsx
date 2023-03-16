@@ -18,7 +18,6 @@ function App () {
               <h2>{movie.Title}</h2>
               <time>{movie.Year}</time>
             </div>
-            <button className='movie-btn'>More Info</button>
           </article>))}
       </section>
     </>
