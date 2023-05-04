@@ -1,4 +1,4 @@
-import { CalendarIcon } from "./components/calendarIcon";
+import { CalendarIcon } from "./components/CalendarIcon";
 
 function App() {
   return (
@@ -10,10 +10,12 @@ function App() {
         </h1>
       </header>
       <main className="mt-10">
-        <div className="flex items-center gap-8">
-          <CalendarIcon className="h-10 w-10 fill-slate-200" />
-          <p className="text-2xl">On Friday, 21 May 2021 at 10:30</p>
-        </div>
+        <article className="bg-white rounded-md shadow-sm">
+          <div className="flex items-center gap-8 p-6">
+            <CalendarIcon className="h-10 w-10 text-gray-500" />
+            <p className="text-2xl">On Friday, 21 May 2021 at 10:30</p>
+          </div>
+        </article>
       </main>
     </div>
   );
