@@ -8,7 +8,7 @@ interface ButtonProps {
   selected?: boolean;
 }
 
-//Button component that recives hour and disabled props
+//Button component that recives hour and disabled props, this has to be exported
 const Button: FC<ButtonProps> = ({ hour, disabled, selected = false }) => {
   return (
     <button
@@ -83,7 +83,7 @@ export const WeeklyCalendar: FC = () => {
 
   return (
     <nav
-      className={`flex w-full overflow-hidden p-6 relative ease-in duration-300 ${
+      className={`flex w-full overflow-hidden p-6 relative ${
         fullHeight ? "h-auto" : "h-[36rem]"
       }`}
     >
