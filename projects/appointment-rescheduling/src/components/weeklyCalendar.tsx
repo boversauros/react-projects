@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { ArrowIcon } from "./icons/ArrowIcon";
 
 //Assign Button component that recives hour and disabled props
 interface ButtonProps {
@@ -82,16 +83,18 @@ export const WeeklyCalendar: FC = () => {
 
   return (
     <nav
-      className={`flex w-full overflow-hidden p-6 relative ${
+      className={`flex w-full overflow-hidden p-6 relative ease-in duration-300 ${
         fullHeight ? "h-auto" : "h-[36rem]"
       }`}
     >
-      <button onClick={handleLeftArrowClick} aria-label="Previous week">
-        &lt;
-      </button>
       <ul className={`flex w-full justify-around ${fullHeight ? "pb-16" : ""}`}>
+        <li className="text-center px-4 py-2">
+          <button onClick={handleLeftArrowClick} aria-label="Previous week">
+            <ArrowIcon direction="left" />
+          </button>
+        </li>
         {weekDays.map((day, index) => (
-          <li key={index} className={`text-center px-4 py-2 `}>
+          <li key={index} className="text-center px-4 py-2">
             <section
               className={`${
                 isToday(day) ? "bg-blue-500 rounded-lg text-white" : ""
@@ -117,13 +120,23 @@ export const WeeklyCalendar: FC = () => {
             </section>
           </li>
         ))}
+        <li className="text-center px-4 py-2">
+          <button onClick={handleRightArrowClick} aria-label="Next week">
+            <ArrowIcon direction="right" />
+          </button>
+        </li>
       </ul>
-      <button onClick={handleRightArrowClick} aria-label="Next week">
-        &gt;
-      </button>
       <div className="absolute bottom-0 left-0 w-full z-10 bg-white text-center py-6 border-t-2">
         <button onClick={() => setFullHeight(!fullHeight)}>
-          {fullHeight ? "Less" : "See more hours"}
+          {fullHeight ? (
+            <span className="flex gap-2 align-center items-center">
+              Less <ArrowIcon direction="up" />{" "}
+            </span>
+          ) : (
+            <span className="flex gap-2 align-center items-center">
+              See more hours <ArrowIcon direction="down" />{" "}
+            </span>
+          )}
         </button>
       </div>
     </nav>

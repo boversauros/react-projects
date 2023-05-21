@@ -1,4 +1,4 @@
-import { CalendarIcon } from "./components/CalendarIcon";
+import { CalendarIcon } from "./components/icons/CalendarIcon";
 import { CardWrapper } from "./components/layout/CardWrapper";
 import { WeeklyCalendar } from "./components/weeklyCalendar";
 
@@ -8,7 +8,7 @@ function App() {
       <header>
         <h1 className="text-3xl font-light">
           Confirm your appointment with{" "}
-          <span className="font-bold">Dr. Simeon Molas</span>
+          <strong className="font-bold">Dr. Simeon Molas</strong>
         </h1>
       </header>
       <main className="mt-10">
@@ -18,6 +18,14 @@ function App() {
             <p className="text-2xl">On Friday, 21 May 2021 at 10:30</p>
           </div>
         </CardWrapper>
+        <div className="mt-10 text-3xl font-light">
+          <strong className="font-bold">
+            Did you have an unexpected situation?{" "}
+          </strong>
+          <p>
+            You can change the appointment for when it suits better for you.
+          </p>
+        </div>
         <div className="mt-10">
           <CardWrapper>
             <WeeklyCalendar />
