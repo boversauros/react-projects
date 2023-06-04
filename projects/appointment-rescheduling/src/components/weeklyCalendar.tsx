@@ -1,6 +1,10 @@
 import { FC, useState } from "react";
 import { ArrowIcon } from "./icons/ArrowIcon";
 
+// to delete
+import dates from "../mocks/dates.json";
+import { convertToCalendarStructure } from "../services/appointments";
+
 //Assign Button component that recives hour and disabled props
 interface ButtonProps {
   hour: string;
@@ -29,6 +33,8 @@ const Button: FC<ButtonProps> = ({ hour, disabled, selected = false }) => {
 export const WeeklyCalendar: FC = () => {
   const [currentDate, setCurrentDate] = useState<Date>(new Date());
   const [fullHeight, setFullHeight] = useState<boolean>(false);
+
+  console.log(convertToCalendarStructure(dates));
 
   const generateWeekDays = (date: Date): Date[] => {
     const startOfWeek = new Date(date);
